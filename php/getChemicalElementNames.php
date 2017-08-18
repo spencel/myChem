@@ -6,6 +6,6 @@ $fileName = "Chemical_Element_Names.txt";
 
 $filePath = $dataDir . "/" . $fileName;
 
-echo readfile( $filePath );
+echo file_get_contents( $filePath );
 
 ?>
