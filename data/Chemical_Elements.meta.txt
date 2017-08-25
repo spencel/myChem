@@ -1,0 +1,13 @@
+id
+name
+symbol
+atomic weight
+melting point (C)
+boiling point (C)
+density (g/cm^3)
+percent of Earth's crust (%)
+discovery date (year)
+group
+electron configuration
+electron configuration change
+ionization energy (eV)

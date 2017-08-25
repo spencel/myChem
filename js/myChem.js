@@ -1,16 +1,14 @@
 var myChem = {};
 
-myChem.chemicalElementNames = undefined;
+myChem.chemicalElementNames = {};
 
-myChem.chemicalElements = undefined;
+myChem.chemicalElements = {};
 
 myChem.getChemicalElementNames = function() {
 
 	jQuery.ajax({
 		url: "php/getChemicalElementNames.php",
 		success: function( strChemicalElementNames ) {
-
-			console.log( typeof strChemicalElementNames );
 
 			var arChemicalElementNames = strChemicalElementNames.split( "\n" );
 
@@ -30,13 +28,46 @@ myChem.getChemicalElementNames = function() {
 
 			myChem.chemicalElementNames = chemicalElementNames;
 
+			myChem.htmlChemicalElementNames();
+
 		}
 	});
 
-}
+};
+
+myChem.htmlChemicalElementNames = function() {
+
+	var strHtml = "<table><tbody>";
+
+	console.log(myChem.chemicalElementNames);
+
+	for ( var id in myChem.chemicalElementNames ) {
+		console.log( id );
+    	if ( myChem.chemicalElementNames.hasOwnProperty( id ) ) {
+
+        	strHtml += "<tr><td>" + myChem.chemicalElementNames[ id ] + "</td></tr>";
+
+        }
+    }
+
+    strHtml += "</tbody></table>";
+
+	jQuery( "body" ).append( strHtml );
+
+};
+
+myChem.loadOrbitalGainPeriodicTable = function() {
+
+	
+
+};
 
 function main() {
 
-	myChem.getChemicalElementNames();
+	// Test A
+	//myChem.getChemicalElementNames();
 
+	// Test B
+	myChem.loadOrbitalGainPeriodicTable();
+	
 }
