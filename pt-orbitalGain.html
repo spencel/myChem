@@ -7,6 +7,21 @@
 
 <title>Periodic Table of Orbital Gain</title>
 
+<style>
+
+table.periodicTable {
+	position:	absolute;
+	display:	inline-block;
+	border-collapse:	collapse;
+}
+
+table.periodicTable td {
+	border:		1px solid black;
+	padding:	10px;
+}
+
+</style>
+
 <!-- Libraries -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -15,11 +30,12 @@
 
 </head>
 
-<body>
+<body onload="main();">
 
-<table>
+<table class="periodicTable">
 	<tbody>
 		<tr>
+			<td></td>
 			<td>1</td>
 			<td>2</td>
 			<td>3</td>
@@ -40,9 +56,157 @@
 			<td>18</td>
 		</tr>
 		<tr>
+			<td>1</td>
 			<td id="chemicalElement-0"></td>
 			<td colspan="16"></td>
 			<td id="chemicalElement-1"></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td id="chemicalElement-2"></td>
+			<td id="chemicalElement-3"></td>
+			<td colspan="10"></td>
+			<td id="chemicalElement-4"></td>
+			<td id="chemicalElement-5"></td>
+			<td id="chemicalElement-6"></td>
+			<td id="chemicalElement-7"></td>
+			<td id="chemicalElement-8"></td>
+			<td id="chemicalElement-9"></td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td id="chemicalElement-10"></td>
+			<td id="chemicalElement-11"></td>
+			<td colspan="10"></td>
+			<td id="chemicalElement-12"></td>
+			<td id="chemicalElement-13"></td>
+			<td id="chemicalElement-14"></td>
+			<td id="chemicalElement-15"></td>
+			<td id="chemicalElement-16"></td>
+			<td id="chemicalElement-17"></td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td id="chemicalElement-18"></td>
+			<td id="chemicalElement-19"></td>
+			<td id="chemicalElement-20"></td>
+			<td id="chemicalElement-21"></td>
+			<td id="chemicalElement-22"></td>
+			<td id="chemicalElement-23"></td>
+			<td id="chemicalElement-24"></td>
+			<td id="chemicalElement-25"></td>
+			<td id="chemicalElement-26"></td>
+			<td id="chemicalElement-27"></td>
+			<td id="chemicalElement-28"></td>
+			<td id="chemicalElement-29"></td>
+			<td id="chemicalElement-30"></td>
+			<td id="chemicalElement-31"></td>
+			<td id="chemicalElement-32"></td>
+			<td id="chemicalElement-33"></td>
+			<td id="chemicalElement-34"></td>
+			<td id="chemicalElement-35"></td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td id="chemicalElement-36"></td>
+			<td id="chemicalElement-37"></td>
+			<td id="chemicalElement-38"></td>
+			<td id="chemicalElement-39"></td>
+			<td id="chemicalElement-40"></td>
+			<td id="chemicalElement-41"></td>
+			<td id="chemicalElement-42"></td>
+			<td id="chemicalElement-43"></td>
+			<td id="chemicalElement-44"></td>
+			<td id="chemicalElement-45"></td>
+			<td id="chemicalElement-46"></td>
+			<td id="chemicalElement-47"></td>
+			<td id="chemicalElement-48"></td>
+			<td id="chemicalElement-49"></td>
+			<td id="chemicalElement-50"></td>
+			<td id="chemicalElement-51"></td>
+			<td id="chemicalElement-52"></td>
+			<td id="chemicalElement-53"></td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td id="chemicalElement-54"></td>
+			<td id="chemicalElement-55"></td>
+			<td></td>
+			<td id="chemicalElement-71"></td>
+			<td id="chemicalElement-72"></td>
+			<td id="chemicalElement-73"></td>
+			<td id="chemicalElement-74"></td>
+			<td id="chemicalElement-75"></td>
+			<td id="chemicalElement-76"></td>
+			<td id="chemicalElement-77"></td>
+			<td id="chemicalElement-78"></td>
+			<td id="chemicalElement-79"></td>
+			<td id="chemicalElement-80"></td>
+			<td id="chemicalElement-81"></td>
+			<td id="chemicalElement-82"></td>
+			<td id="chemicalElement-83"></td>
+			<td id="chemicalElement-84"></td>
+			<td id="chemicalElement-85"></td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td id="chemicalElement-86"></td>
+			<td id="chemicalElement-87"></td>
+			<td></td>
+			<td id="chemicalElement-103"></td>
+			<td id="chemicalElement-104"></td>
+			<td id="chemicalElement-105"></td>
+			<td id="chemicalElement-106"></td>
+			<td id="chemicalElement-107"></td>
+			<td id="chemicalElement-108"></td>
+			<td id="chemicalElement-109"></td>
+			<td id="chemicalElement-110"></td>
+			<td id="chemicalElement-111"></td>
+			<td id="chemicalElement-112"></td>
+			<td id="chemicalElement-113"></td>
+			<td id="chemicalElement-114"></td>
+			<td id="chemicalElement-115"></td>
+			<td id="chemicalElement-116"></td>
+			<td id="chemicalElement-117"></td>
+		</tr>
+		<tr>
+			<td colspan="19"></td>
+		</tr>
+		<tr>
+			<td colspan="4"></td>
+			<td id="chemicalElement-56"></td>
+			<td id="chemicalElement-57"></td>
+			<td id="chemicalElement-58"></td>
+			<td id="chemicalElement-59"></td>
+			<td id="chemicalElement-60"></td>
+			<td id="chemicalElement-61"></td>
+			<td id="chemicalElement-62"></td>
+			<td id="chemicalElement-63"></td>
+			<td id="chemicalElement-64"></td>
+			<td id="chemicalElement-65"></td>
+			<td id="chemicalElement-66"></td>
+			<td id="chemicalElement-67"></td>
+			<td id="chemicalElement-68"></td>
+			<td id="chemicalElement-69"></td>
+			<td id="chemicalElement-70"></td>
+		</tr>
+		<tr>
+			<td colspan="4"></td>
+			<td id="chemicalElement-88"></td>
+			<td id="chemicalElement-89"></td>
+			<td id="chemicalElement-90"></td>
+			<td id="chemicalElement-91"></td>
+			<td id="chemicalElement-92"></td>
+			<td id="chemicalElement-93"></td>
+			<td id="chemicalElement-94"></td>
+			<td id="chemicalElement-95"></td>
+			<td id="chemicalElement-96"></td>
+			<td id="chemicalElement-97"></td>
+			<td id="chemicalElement-98"></td>
+			<td id="chemicalElement-99"></td>
+			<td id="chemicalElement-100"></td>
+			<td id="chemicalElement-101"></td>
+			<td id="chemicalElement-102"></td>
 		</tr>
 	</tbody>
 </table>

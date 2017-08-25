@@ -58,7 +58,11 @@ myChem.htmlChemicalElementNames = function() {
 
 myChem.loadOrbitalGainPeriodicTable = function() {
 
-	
+	for ( var i = 0; i < 118; i++ ) {
+
+		document.getElementById( "chemicalElement-" + i ).innerHTML = i;
+
+	}
 
 };
 
