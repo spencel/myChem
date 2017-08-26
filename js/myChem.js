@@ -1,3 +1,7 @@
+(function () {
+
+"use strict";
+
 var myChem = {};
 
 myChem.chemicalElementNames = {};
@@ -56,22 +60,33 @@ myChem.htmlChemicalElementNames = function() {
 
 };
 
-myChem.loadOrbitalGainPeriodicTable = function() {
+myChem.loadPeriodicTableElectronConfigurationChange = function() {
 
-	for ( var i = 0; i < 118; i++ ) {
+	jQuery.ajax({
+		url: "php/getChemicalElements.php",
+		success: function( strChemicalElementNames ) {
 
-		document.getElementById( "chemicalElement-" + i ).innerHTML = i;
+			//console.log( strChemicalElementNames );
 
-	}
+			var arChemicalElements = strChemicalElementNames.split( "\n" );
+
+			var diChemicalElements = {};
+
+			for ( var i = 0; i < arChemicalElementNames.length; i++ ) {
+
+				var line = arChemicalElementNames[ i ].split( "\t" );
+
+				var chemicalElementId = line[ 0 ];
+
+				var chemicalElementName = line[ 1 ];
+
+				chemicalElementNames[ chemicalElementId ] = chemicalElementName;
+
+			}
+
+		}
+	});
 
 };
 
-function main() {
-
-	// Test A
-	//myChem.getChemicalElementNames();
-
-	// Test B
-	myChem.loadOrbitalGainPeriodicTable();
-	
-}
+})();

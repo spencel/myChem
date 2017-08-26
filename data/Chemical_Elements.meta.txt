@@ -1,4 +1,5 @@
 id
+atomic number
 name
 symbol
 atomic weight
