@@ -11,7 +11,11 @@ myChem.chemicalElements = {};
 myChem.getChemicalElementNames = function() {
 
 	jQuery.ajax({
+		type: "POST",
 		url: "php/getChemicalElementNames.php",
+		data: function( Flashcards.byId ) {
+			console.log( Flashcards.byId );
+		}
 		success: function( strChemicalElementNames ) {
 
 			var arChemicalElementNames = strChemicalElementNames.split( "\n" );
